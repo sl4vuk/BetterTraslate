@@ -8,453 +8,204 @@
   <link rel="stylesheet" href="settings.css">
 </head>
 <body class="theme-system">
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="logo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M3 5h12M9 3v2M3 10h4M3 15h4M10 9l4 6M14 9l-4 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M14 4h7M14 8h7M14 12h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-          <div>
-            <div class="logo-name">Better Translate</div>
-            <div class="logo-version" id="versionDisplay">v1.0.0</div>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <svg width="22" height="22" viewBox="0 0 64 64" fill="none"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"><line x1="9" y1="14" x2="33" y2="14"/><line x1="21" y1="10" x2="21" y2="20"/><line x1="9" y1="26" x2="18" y2="26"/><line x1="14" y1="22" x2="7" y2="38"/><line x1="14" y1="22" x2="21" y2="38"/><line x1="26" y1="22" x2="19" y2="38"/><line x1="26" y1="22" x2="33" y2="38"/></g><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"><line x1="36" y1="54" x2="50" y2="24"/><line x1="50" y1="24" x2="63" y2="54"/><line x1="40" y1="44" x2="60" y2="44"/></g></svg>
+        <div><div class="logo-name">Better Translate</div><div class="logo-version" id="versionDisplay">v1.0.0</div></div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-section="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Search</button>
+      <button class="nav-item" data-section="general"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" stroke="currentColor" stroke-width="1.8"/></svg>General</button>
+      <button class="nav-item" data-section="translation"><svg width="15" height="15" viewBox="0 0 64 64" fill="none"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5"><line x1="9" y1="14" x2="33" y2="14"/><line x1="21" y1="10" x2="21" y2="20"/><line x1="9" y1="26" x2="18" y2="26"/><line x1="14" y1="22" x2="7" y2="38"/><line x1="14" y1="22" x2="21" y2="38"/><line x1="26" y1="22" x2="19" y2="38"/><line x1="26" y1="22" x2="33" y2="38"/></g><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5"><line x1="36" y1="54" x2="50" y2="24"/><line x1="50" y1="24" x2="63" y2="54"/><line x1="40" y1="44" x2="60" y2="44"/></g></svg>Translation</button>
+      <button class="nav-item" data-section="triggers"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Triggers</button>
+      <button class="nav-item" data-section="services"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12a15.3 15.3 0 0 1 4-10Z" stroke="currentColor" stroke-width="1.8"/></svg>Services</button>
+      <div class="nav-divider"></div>
+      <button class="nav-item" data-section="data"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Import / Export</button>
+      <button class="nav-item" data-section="about"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>About</button>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="theme-cycle-btn" id="themeToggle">
+        <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-system" width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span id="themeLabel">System</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- Search -->
+    <section class="settings-section active" id="section-search">
+      <div class="section-header"><h1>Search</h1><p>Search a specific setting by name.</p></div>
+      <div class="settings-group search-group">
+        <div class="search-bar-wrapper">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="text" id="settingsSearchInput" class="settings-search-input" placeholder="Search settings…" autocomplete="off">
+          <button class="search-clear" id="searchClear" style="display:none">×</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-empty" id="searchEmpty"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" opacity="0.3"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><p>No settings found</p></div>
+      </div>
+    </section>
+
+    <!-- General -->
+    <section class="settings-section" id="section-general">
+      <div class="section-header"><h1>General</h1><p>Core preferences for languages and interface.</p></div>
+      <div class="settings-group">
+        <div class="setting-row" data-search="target language default translate into"><div class="setting-info"><label class="setting-label">Target Language</label><span class="setting-desc">Default language to translate into.</span></div><div class="setting-control"><div class="lang-select-wrapper"><button class="select-btn" id="targetLangBtn"><span id="targetLangName">English</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="lang-dropdown" id="targetLangDropdown"><div class="lang-search-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="text" class="lang-search-input" id="targetLangSearch" placeholder="Search…" autocomplete="off"></div><div class="lang-list" id="targetLangList"></div></div></div></div></div>
+        <div class="setting-row" data-search="second language source matches"><div class="setting-info"><label class="setting-label">Second Language</label><span class="setting-desc">Used when source matches the target language.</span></div><div class="setting-control"><div class="lang-select-wrapper"><button class="select-btn" id="secondLangBtn"><span id="secondLangName">Spanish</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="lang-dropdown" id="secondLangDropdown"><div class="lang-search-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="text" class="lang-search-input" id="secondLangSearch" placeholder="Search…" autocomplete="off"></div><div class="lang-list" id="secondLangList"></div></div></div></div></div>
+        <div class="setting-row" data-search="auto switch second language source target"><div class="setting-info"><label class="setting-label">Auto-switch to Second Language</label><span class="setting-desc">If source text is already in target language, use second language instead.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="autoSwitch"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="setting-row" data-search="interface language ui display translate"><div class="setting-info"><label class="setting-label">Interface Language</label><span class="setting-desc">Translates the extension UI. Applied on next open. Cached per session.</span></div><div class="setting-control"><div class="lang-select-wrapper"><button class="select-btn" id="ifaceLangBtn"><span id="ifaceLangName">English</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="lang-dropdown" id="ifaceLangDropdown"><div class="lang-search-row"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="text" class="lang-search-input" id="ifaceLangSearch" placeholder="Search…" autocomplete="off"></div><div class="lang-list" id="ifaceLangList"></div></div></div></div></div>
+        <!-- Break Limit -->
+        <div class="setting-row" data-search="break limit character custom max input"><div class="setting-info"><label class="setting-label">Break Limit</label><span class="setting-desc">Set a custom character limit for the input. Default is 5000.<br><span class="warn-text">⚠ Very high limits may cause lag or translation errors.</span></span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="breakLimit"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="breakLimitSubSettings">
+          <div class="setting-row sub"><div class="setting-info"><label class="setting-label">Character Limit</label><span class="setting-desc">Max characters allowed in the input field.</span></div><div class="setting-control"><input type="number" class="number-input" id="charLimit" min="1" value="5000" style="width:90px"></div></div>
+        </div>
+      </div>
+
+      <!-- Disabled Sites -->
+      <div class="settings-group">
+        <div class="group-title">Disabled Sites</div>
+        <div class="setting-row" data-search="disabled sites block extension url website"><div class="setting-info"><label class="setting-label">Enable Disabled Sites</label><span class="setting-desc">Block the extension from activating on specific websites.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="disabledSitesEnabled"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings visible" id="disabledSitesSubSettings">
+          <div class="disabled-sites-wrapper">
+            <div class="site-add-row">
+              <input type="text" class="text-input" id="siteInput" placeholder="www.example.com">
+              <button class="btn-secondary" id="addSiteBtn">Add</button>
+            </div>
+            <div class="site-list" id="siteList">
+              <div class="site-list-empty" id="siteListEmpty">No disabled sites. The extension is active everywhere.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Translation -->
+    <section class="settings-section" id="section-translation">
+      <div class="section-header"><h1>Translation</h1><p>Options for how translations are fetched and displayed.</p></div>
+      <div class="settings-group">
+        <div class="setting-row" data-search="translation cache speed store results"><div class="setting-info"><label class="setting-label">Translation Cache</label><span class="setting-desc">Cache results to speed up repeated translations.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="translationCache"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="setting-row" data-search="show candidates alternatives single word"><div class="setting-info"><label class="setting-label">Show Translation Candidates</label><span class="setting-desc">Show alternative translations when a single word is translated.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="showCandidates"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="setting-row" data-search="auto translate sidebar automatic typing"><div class="setting-info"><label class="setting-label">Auto-translate in Sidebar</label><span class="setting-desc">Automatically translate as you type in the sidebar input.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="sidebarAutoTranslate"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+      </div>
+    </section>
+
+    <!-- Triggers -->
+    <section class="settings-section" id="section-triggers">
+      <div class="section-header"><h1>Triggers</h1><p>Choose how translation is activated.</p></div>
+
+      <!-- Context Menu — independent -->
+      <div class="settings-group">
+        <div class="group-title">Context Menu</div>
+        <div class="setting-row" data-search="context menu right click translate"><div class="setting-info"><label class="setting-label">Add to context menu</label><span class="setting-desc">Show "Translate" when right-clicking selected text. Independent of other triggers.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="contextMenu"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="contextMenuSubSettings">
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="contextMenuAction" value="sidebar"><span class="radio-custom"></span><div><span class="radio-title">Send to sidebar</span><span class="radio-desc">Open sidebar and send text there. Translation must be copied manually.</span></div></label>
+            <label class="radio-label"><input type="radio" name="contextMenuAction" value="clipboard"><span class="radio-custom"></span><div><span class="radio-title">Clipboard save</span><span class="radio-desc">Copy the translation to clipboard automatically.</span></div></label>
+            <label class="radio-label"><input type="radio" name="contextMenuAction" value="replace"><span class="radio-custom"></span><div><span class="radio-title">Replace text</span><span class="radio-desc">Replace selected text with its translation in-place.</span></div></label>
           </div>
         </div>
       </div>
 
-      <nav class="sidebar-nav">
-        <button class="nav-item active" data-section="general">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" stroke="currentColor" stroke-width="1.8"/></svg>
-          General
-        </button>
-        <button class="nav-item" data-section="translation">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 5h12M9 3v2M3 10h4M3 15h4M10 9l4 6M14 9l-4 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          Translation
-        </button>
-        <button class="nav-item" data-section="triggers">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Triggers
-        </button>
-        <button class="nav-item" data-section="services">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          Services
-        </button>
-
-        <div class="nav-divider"></div>
-
-        <button class="nav-item" data-section="data">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Import / Export
-        </button>
-        <button class="nav-item" data-section="about">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          About
-        </button>
-      </nav>
-
-      <div class="sidebar-footer">
-        <button class="theme-cycle-btn" id="themeToggle">
-          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="icon-system" width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <span id="themeLabel">System</span>
-        </button>
+      <!-- Sidebar options -->
+      <div class="settings-group">
+        <div class="group-title">Sidebar</div>
+        <div class="setting-row" data-search="only sidebar open background translate"><div class="setting-info"><label class="setting-label">Only on sidebar open</label><span class="setting-desc">Triggers only work if the sidebar is already open. No background translation.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="onlySidebarOpen"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="setting-row" data-search="open sidebar panel clipboard send"><div class="setting-info"><label class="setting-label">Open in sidebar</label><span class="setting-desc">When a trigger uses "Clipboard save", also open the sidebar with the translation.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="openInSidebar"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
       </div>
-    </aside>
 
-    <!-- Main Content -->
-    <main class="main">
-
-      <!-- ═══ GENERAL ═══ -->
-      <section class="settings-section active" id="section-general">
-        <div class="section-header">
-          <h1>General</h1>
-          <p>Core preferences for translation and interface.</p>
-        </div>
-
-        <div class="settings-group">
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Target Language</label>
-              <span class="setting-desc">Default language to translate into.</span>
-            </div>
-            <div class="setting-control">
-              <div class="lang-select-wrapper" id="targetLangWrapper">
-                <button class="select-btn" id="targetLangBtn">
-                  <span id="targetLangName">English</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </button>
-                <div class="lang-dropdown" id="targetLangDropdown">
-                  <div class="lang-search-row">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                    <input type="text" class="lang-search-input" id="targetLangSearch" placeholder="Search…" autocomplete="off">
-                  </div>
-                  <div class="lang-list" id="targetLangList"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Second Language</label>
-              <span class="setting-desc">Used when source matches the target language.</span>
-            </div>
-            <div class="setting-control">
-              <div class="lang-select-wrapper" id="secondLangWrapper">
-                <button class="select-btn" id="secondLangBtn">
-                  <span id="secondLangName">Spanish</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </button>
-                <div class="lang-dropdown" id="secondLangDropdown">
-                  <div class="lang-search-row">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                    <input type="text" class="lang-search-input" id="secondLangSearch" placeholder="Search…" autocomplete="off">
-                  </div>
-                  <div class="lang-list" id="secondLangList"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Auto-switch to Second Language</label>
-              <span class="setting-desc">If selected text is in the target language, translate to second language instead.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="autoSwitch"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Interface Language</label>
-              <span class="setting-desc">Language for the extension UI (not the translation target).</span>
-            </div>
-            <div class="setting-control">
-              <div class="lang-select-wrapper" id="ifaceLangWrapper">
-                <button class="select-btn" id="ifaceLangBtn">
-                  <span id="ifaceLangName">English</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </button>
-                <div class="lang-dropdown" id="ifaceLangDropdown">
-                  <div class="lang-search-row">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                    <input type="text" class="lang-search-input" id="ifaceLangSearch" placeholder="Search…" autocomplete="off">
-                  </div>
-                  <div class="lang-list" id="ifaceLangList"></div>
-                </div>
-              </div>
-            </div>
+      <!-- Modifier Key -->
+      <div class="settings-group">
+        <div class="group-title">Modifier Key</div>
+        <div class="setting-row" data-search="modifier key translate shortcut keyboard"><div class="setting-info"><label class="setting-label">Translate on modifier key</label><span class="setting-desc">Translate selected text when a key combination is pressed.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="translateOnModifier" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="modifierSubSettings">
+          <div class="setting-row sub"><div class="setting-info"><label class="setting-label">Key combination</label><span class="setting-desc">Click the field and press your desired keys.</span><span class="keybind-error" id="modifierComboError"></span></div><div class="setting-control"><div class="keybind-wrapper"><input type="text" class="keybind-input" id="modifierCombo" placeholder="Click to record…" readonly><button class="keybind-clear" id="modifierComboClear" title="Reset">×</button></div></div></div>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="modifierAction" value="sidebar"><span class="radio-custom"></span><div><span class="radio-title">Send to sidebar</span><span class="radio-desc">Open sidebar and send text there.</span></div></label>
+            <label class="radio-label"><input type="radio" name="modifierAction" value="clipboard"><span class="radio-custom"></span><div><span class="radio-title">Clipboard save</span><span class="radio-desc">Copy the translation to clipboard automatically.</span></div></label>
+            <label class="radio-label"><input type="radio" name="modifierAction" value="replace"><span class="radio-custom"></span><div><span class="radio-title">Replace text</span><span class="radio-desc">Replace selected text with its translation in-place.</span></div></label>
           </div>
         </div>
-      </section>
-
-      <!-- ═══ TRANSLATION ═══ -->
-      <section class="settings-section" id="section-translation">
-        <div class="section-header">
-          <h1>Translation</h1>
-          <p>Options for how translations are fetched and displayed.</p>
-        </div>
-
-        <div class="settings-group">
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Translation Cache</label>
-              <span class="setting-desc">Cache results to speed up repeated translations.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="translationCache"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Show Translation Candidates</label>
-              <span class="setting-desc">Show alternative translations when a single word is translated.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="showCandidates"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ TRIGGERS ═══ -->
-      <section class="settings-section" id="section-triggers">
-        <div class="section-header">
-          <h1>Triggers</h1>
-          <p>Configure how and when translation is activated. Only one mode can be active at a time.</p>
-        </div>
-
-        <!-- Modifier Key -->
-        <div class="settings-group">
-          <div class="group-title">Modifier Key</div>
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Translate on modifier key</label>
-              <span class="setting-desc">Translate selected text when a modifier key is pressed.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="translateOnModifier" name="triggerMode" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-          <div class="sub-settings" id="modifierSubSettings">
-            <div class="setting-row sub">
-              <div class="setting-info">
-                <label class="setting-label">Modifier key</label>
-                <span class="setting-desc">Which key to hold while text is selected.</span>
-              </div>
-              <div class="setting-control">
-                <select class="select-input" id="modifierKey">
-                  <option value="Alt">Alt</option>
-                  <option value="Ctrl">Ctrl</option>
-                  <option value="Shift">Shift</option>
-                </select>
-              </div>
-            </div>
-            <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="modifierAction" value="clipboard" id="modifierClipboard">
-                <span class="radio-custom"></span>
-                <div>
-                  <span class="radio-title">Clipboard save</span>
-                  <span class="radio-desc">Copy the translation to clipboard automatically.</span>
-                </div>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="modifierAction" value="replace" id="modifierReplace">
-                <span class="radio-custom"></span>
-                <div>
-                  <span class="radio-title">Replace text</span>
-                  <span class="radio-desc">Replace selected text with its translation in-place.</span>
-                </div>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Writing Translate -->
-        <div class="settings-group">
-          <div class="group-title">Writing Translate</div>
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Translate while writing</label>
-              <span class="setting-desc">Translate text in real-time as you type in any input field.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="writingTranslate" name="triggerMode" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-          <div class="sub-settings" id="writingSubSettings">
-            <div class="setting-row sub">
-              <div class="setting-info">
-                <label class="setting-label">Delay (ms)</label>
-                <span class="setting-desc">Milliseconds after typing stops before translating.</span>
-              </div>
-              <div class="setting-control">
-                <div class="number-input-wrapper">
-                  <input type="number" class="number-input" id="writingDelay" min="100" max="5000" step="100" value="500">
-                  <span class="number-unit">ms</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Context Menu -->
-        <div class="settings-group">
-          <div class="group-title">Context Menu</div>
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Add to context menu</label>
-              <span class="setting-desc">Show "Translate" option when right-clicking selected text.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="contextMenu" name="triggerMode" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copy to Translate -->
-        <div class="settings-group">
-          <div class="group-title">Copy to Translate</div>
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Translate on copy</label>
-              <span class="setting-desc">When you copy text and the panel is open, translate it automatically.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="copyToTranslate" name="triggerMode" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-          <div class="sub-settings" id="copySubSettings">
-            <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="copyAction" value="clipboard" id="copyClipboard">
-                <span class="radio-custom"></span>
-                <div>
-                  <span class="radio-title">Clipboard save</span>
-                  <span class="radio-desc">Save the translation to clipboard automatically.</span>
-                </div>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="copyAction" value="replace" id="copyReplace">
-                <span class="radio-custom"></span>
-                <div>
-                  <span class="radio-title">Replace text</span>
-                  <span class="radio-desc">Replace the copied text with the translation in-place.</span>
-                </div>
-              </label>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ SERVICES ═══ -->
-      <section class="settings-section" id="section-services">
-        <div class="section-header">
-          <h1>Services</h1>
-          <p>Configure translation service providers.</p>
-        </div>
-
-        <div class="settings-group">
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display:inline;margin-right:5px;vertical-align:middle"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Z" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12a15.3 15.3 0 0 1 4-10Z" stroke="currentColor" stroke-width="1.8"/></svg>
-                Google Translate
-              </label>
-              <span class="setting-desc">Free, no API key required.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="enableGoogle" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display:inline;margin-right:5px;vertical-align:middle"><rect x="3" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/></svg>
-                Microsoft Translate
-              </label>
-              <span class="setting-desc">Uses Bing Translator. Add an API key for higher limits.</span>
-            </div>
-            <div class="setting-control">
-              <label class="toggle"><input type="checkbox" id="enableMicrosoft" checked><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
-            </div>
-          </div>
-
-          <div class="setting-row">
-            <div class="setting-info">
-              <label class="setting-label">Microsoft API Key</label>
-              <span class="setting-desc">Optional. Provides higher request limits.</span>
-            </div>
-            <div class="setting-control" style="flex:1;max-width:260px">
-              <input type="password" class="text-input" id="microsoftApiKey" placeholder="Paste API key…">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══ DATA ═══ -->
-      <section class="settings-section" id="section-data">
-        <div class="section-header">
-          <h1>Import / Export</h1>
-          <p>Backup or restore your settings.</p>
-        </div>
-
-        <div class="settings-group">
-          <div class="group-title">Import Settings</div>
-          <p class="group-desc">Load a settings file from your computer.</p>
-          
-          <div class="drop-zone" id="dropZone">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" opacity="0.4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <p>Drop JSON file here, or</p>
-            <div class="drop-actions">
-              <button class="btn-secondary" id="browseFile">Browse file</button>
-              <span>or paste from URL</span>
-            </div>
-            <input type="file" id="fileInput" accept=".json" style="display:none">
-          </div>
-
-          <div class="url-import-row">
-            <input type="url" class="text-input" id="importUrl" placeholder="https://example.com/settings.json">
-            <button class="btn-secondary" id="importFromUrl">Import from URL</button>
-          </div>
-        </div>
-
-        <div class="settings-group">
-          <div class="group-title">Export Settings</div>
-          <p class="group-desc">Save your current settings as a JSON file.</p>
-          <button class="btn-primary" id="exportSettings">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Export settings.json
-          </button>
-        </div>
-
-        <div class="settings-group danger-zone">
-          <div class="group-title">Reset Settings</div>
-          <p class="group-desc">Restore all settings to their default values. This cannot be undone.</p>
-          <button class="btn-danger" id="resetSettings">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 3v5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Reset to defaults
-          </button>
-        </div>
-      </section>
-
-      <!-- ═══ ABOUT ═══ -->
-      <section class="settings-section" id="section-about">
-        <div class="section-header">
-          <h1>About</h1>
-        </div>
-
-        <div class="settings-group about-card">
-          <div class="about-logo">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-              <path d="M3 5h12M9 3v2M3 10h4M3 15h4M10 9l4 6M14 9l-4 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M14 4h7M14 8h7M14 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="about-name">Better Translate</div>
-          <div class="about-version" id="aboutVersion">Version 1.0.0</div>
-
-          <div class="about-meta">
-            <div class="meta-row">
-              <span class="meta-key">License</span>
-              <span class="meta-val">MIT</span>
-            </div>
-            <div class="meta-row">
-              <span class="meta-key">Repository</span>
-              <a href="https://github.com/sl4vuk/BetterTraslate" target="_blank" class="meta-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                github.com/sl4vuk/BetterTraslate
-              </a>
-            </div>
-          </div>
-
-          <a href="https://github.com/sl4vuk/BetterTraslate" target="_blank" class="github-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </section>
-
-      <!-- Save Bar -->
-      <div class="save-bar" id="saveBar">
-        <span class="save-hint">Unsaved changes</span>
-        <button class="btn-primary" id="saveSettings">Save</button>
       </div>
-    </main>
-  </div>
 
-  <!-- Dropdown Overlay -->
-  <div class="dropdown-overlay" id="dropdownOverlay"></div>
+      <!-- Writing Translate -->
+      <div class="settings-group">
+        <div class="group-title">Writing Translate</div>
+        <div class="setting-row" data-search="writing translate real time typing input"><div class="setting-info"><label class="setting-label">Translate while writing</label><span class="setting-desc">Translate text in real-time as you type in any input field.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="writingTranslate" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="writingSubSettings">
+          <div class="setting-row sub"><div class="setting-info"><label class="setting-label">Translation Speed</label><span class="setting-desc">How quickly to translate after you stop typing.</span></div><div class="setting-control"><select class="select-input" id="writingSpeed"><option value="very-fast">Very Fast</option><option value="fast">Fast</option><option value="medium">Medium</option><option value="slow">Slow</option><option value="very-slow">Very Slow</option></select></div></div>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="writingMode" value="sidebar"><span class="radio-custom"></span><div><span class="radio-title">Send to sidebar</span><span class="radio-desc">Each text typed is sent to the sidebar and translated automatically.</span></div></label>
+            <label class="radio-label"><input type="radio" name="writingMode" value="replace"><span class="radio-custom"></span><div><span class="radio-title">Replace text</span><span class="radio-desc">Translate and replace text directly inside the input field.</span></div></label>
+          </div>
+        </div>
+      </div>
 
-  <script src="languages.js"></script>
-  <script src="settings.js"></script>
+      <!-- Copy to Translate -->
+      <div class="settings-group">
+        <div class="group-title">Copy to Translate</div>
+        <div class="setting-row" data-search="copy translate clipboard automatic"><div class="setting-info"><label class="setting-label">Translate on copy</label><span class="setting-desc">When you copy text, translate it automatically.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="copyToTranslate" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="copySubSettings">
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="copyAction" value="sidebar"><span class="radio-custom"></span><div><span class="radio-title">Send to sidebar</span><span class="radio-desc">Open sidebar and send text there.</span></div></label>
+            <label class="radio-label"><input type="radio" name="copyAction" value="clipboard"><span class="radio-custom"></span><div><span class="radio-title">Clipboard save</span><span class="radio-desc">Save the translation to clipboard automatically.</span></div></label>
+            <label class="radio-label"><input type="radio" name="copyAction" value="replace"><span class="radio-custom"></span><div><span class="radio-title">Replace text</span><span class="radio-desc">Replace the copied text with the translation in-place.</span></div></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup -->
+      <div class="settings-group">
+        <div class="group-title">Translate on Popup</div>
+        <div class="setting-row" data-search="popup selection mini button translate"><div class="setting-info"><label class="setting-label">Show popup on selection</label><span class="setting-desc">Show a mini "Translate" button above selected text.</span></div><div class="setting-control"><label class="toggle"><input type="checkbox" id="translateOnPopup" class="trigger-toggle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div>
+        <div class="sub-settings" id="popupSubSettings">
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="popupAction" value="sidebar"><span class="radio-custom"></span><div><span class="radio-title">Send to sidebar</span><span class="radio-desc">Open sidebar and send text there.</span></div></label>
+            <label class="radio-label"><input type="radio" name="popupAction" value="clipboard"><span class="radio-custom"></span><div><span class="radio-title">Clipboard save</span><span class="radio-desc">Copy the translation to clipboard automatically.</span></div></label>
+            <label class="radio-label"><input type="radio" name="popupAction" value="replace"><span class="radio-custom"></span><div><span class="radio-title">Replace text</span><span class="radio-desc">Replace selected text with its translation in-place.</span></div></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="settings-section" id="section-services">
+      <div class="section-header"><h1>Services</h1><p>Configure translation providers.</p></div>
+      <div class="settings-group services-group" id="servicesGroup">
+        <div class="service-row" id="svcrow-google" data-service="google"><div class="service-row-inner"><div class="service-row-left"><div class="svc-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Z" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12a15.3 15.3 0 0 1 4-10Z" stroke="currentColor" stroke-width="1.8"/></svg><span class="svc-name">Google Translate</span><span class="svc-default-badge" id="badge-google">Default</span></div><span class="svc-desc">Free, no API key required.</span></div><label class="toggle"><input type="checkbox" id="enableGoogle"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div><div class="svc-bottom"><button class="svc-set-default-btn" id="setdefault-google">Set as default</button></div></div>
+        <div class="service-row" id="svcrow-microsoft" data-service="microsoft"><div class="service-row-inner"><div class="service-row-left"><div class="svc-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/></svg><span class="svc-name">Microsoft Translate</span><span class="svc-default-badge" id="badge-microsoft">Default</span></div><span class="svc-desc">Requires an API key (Azure Cognitive).</span></div><label class="toggle"><input type="checkbox" id="enableMicrosoft"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div><div class="svc-apikey-row" id="apirow-microsoft"><input type="password" class="text-input" id="microsoftApiKey" placeholder="Paste Microsoft API key…"></div><div class="svc-bottom"><button class="svc-set-default-btn" id="setdefault-microsoft">Set as default</button></div></div>
+        <div class="service-row" id="svcrow-deepl" data-service="deepl"><div class="service-row-inner"><div class="service-row-left"><div class="svc-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="svc-name">DeepL</span><span class="svc-default-badge" id="badge-deepl">Default</span></div><span class="svc-desc">High-quality AI translation. Requires an API key.</span></div><label class="toggle"><input type="checkbox" id="enableDeepL"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div><div class="svc-apikey-row" id="apirow-deepl"><input type="password" class="text-input" id="deeplApiKey" placeholder="Paste DeepL API key…"></div><div class="svc-bottom"><button class="svc-set-default-btn" id="setdefault-deepl">Set as default</button></div></div>
+        <div class="service-row" id="svcrow-yandex" data-service="yandex"><div class="service-row-inner"><div class="service-row-left"><div class="svc-header"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M9 7h3.5a3.5 3.5 0 0 1 0 7H11v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 14l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="svc-name">Yandex Translate</span><span class="svc-default-badge" id="badge-yandex">Default</span></div><span class="svc-desc">Yandex Cloud translation. Requires an API key.</span></div><label class="toggle"><input type="checkbox" id="enableYandex"><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div><div class="svc-apikey-row" id="apirow-yandex"><input type="password" class="text-input" id="yandexApiKey" placeholder="Paste Yandex API key…"></div><div class="svc-bottom"><button class="svc-set-default-btn" id="setdefault-yandex">Set as default</button></div></div>
+      </div>
+    </section>
+
+    <!-- Import/Export -->
+    <section class="settings-section" id="section-data">
+      <div class="section-header"><h1>Import / Export</h1><p>Backup or restore your settings.</p></div>
+      <div class="settings-group"><div class="group-title">Import Settings</div><p class="group-desc">Load a settings file from your computer, drag & drop, or import from a URL.</p><div class="drop-zone" id="dropZone"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" opacity="0.4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Drop JSON file here, or</p><button class="btn-secondary" id="browseFile">Browse file</button><input type="file" id="fileInput" accept=".json" style="display:none"></div><div class="url-import-row"><input type="url" class="text-input" id="importUrl" placeholder="https://example.com/settings.json"><button class="btn-secondary" id="importFromUrl">Import from URL</button></div></div>
+      <div class="settings-group"><div class="group-title">Export Settings</div><p class="group-desc">Save all your settings as a JSON file.</p><button class="btn-primary" id="exportSettings"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Export settings.json</button></div>
+      <div class="settings-group"><div class="group-title">Reset Settings</div><p class="group-desc">Restore all settings to their default values. This cannot be undone.</p><button class="btn-danger" id="resetSettings"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 3v5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Reset to defaults</button></div>
+    </section>
+
+    <!-- About -->
+    <section class="settings-section" id="section-about">
+      <div class="section-header"><h1>About</h1></div>
+      <div class="settings-group about-card">
+        <div class="about-logo"><svg width="40" height="40" viewBox="0 0 64 64" fill="none"><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"><line x1="9" y1="14" x2="33" y2="14"/><line x1="21" y1="10" x2="21" y2="20"/><line x1="9" y1="26" x2="18" y2="26"/><line x1="14" y1="22" x2="7" y2="38"/><line x1="14" y1="22" x2="21" y2="38"/><line x1="26" y1="22" x2="19" y2="38"/><line x1="26" y1="22" x2="33" y2="38"/></g><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"><line x1="36" y1="54" x2="50" y2="24"/><line x1="50" y1="24" x2="63" y2="54"/><line x1="40" y1="44" x2="60" y2="44"/></g></svg></div>
+        <div class="about-name">Better Translate</div><div class="about-version" id="aboutVersion">Version 1.0.0</div>
+        <div class="about-meta"><div class="meta-row"><span class="meta-key">License</span><span class="meta-val">MIT</span></div><div class="meta-row"><span class="meta-key">Repository</span><a href="https://github.com/sl4vuk/BetterTraslate" target="_blank" class="meta-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>github.com/sl4vuk/BetterTraslate</a></div></div>
+        <a href="https://github.com/sl4vuk/BetterTraslate" target="_blank" class="github-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>View on GitHub</a>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="dropdown-overlay" id="dropdownOverlay"></div>
+<script src="languages.js"></script>
+<script src="settings.js"></script>
 </body>
 </html>
